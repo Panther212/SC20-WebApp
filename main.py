@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import google.cloud
 from google.cloud import firestore
-import plotly.graph_objects as go
 
  
 # Authenticate to Firestore with the JSON account key.
