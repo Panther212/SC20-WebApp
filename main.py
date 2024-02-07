@@ -20,7 +20,7 @@ doc = doc_ref.get()
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
 
-col1, col2 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
  labels = ['Oxygen','Hydrogen','Carbon_Dioxide','Nitrogen']
