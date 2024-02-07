@@ -27,7 +27,7 @@ with col1:
  values = [4500, 2500, 1053, 500]
 
  fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
- st.plotly_chart(fig,width=800,height=400)
+ st.plotly_chart(fig,use_container_width=True)
 
 with col2:
  df = pd.DataFrame({
