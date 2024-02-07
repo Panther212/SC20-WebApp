@@ -20,8 +20,7 @@ doc = doc_ref.get()
 # Let's see what we got!
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
-with st.sidebar:
-    with st.header('_Streamlit_ is :blue[cool] :sunglasses:')
+Farmer_name= st.sidebar.header('Ramesh Kapare')
 
 
 
