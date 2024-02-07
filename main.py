@@ -67,12 +67,22 @@ with col2:
     ),
     layers=[
      pdk.Layer(
-            'ScatterplotLayer',
+            "ScreenGridLayer",
             data=chart_data,
             get_position='[lon, lat]',
             get_color='[200, 30, 0, 160]',
-            get_radius=20,
-        ),
+            pickable=False,
+            opacity=0.8,
+            cell_size_pixels=50,
+            color_range=[
+             [0, 25, 0, 25],
+             [0, 85, 0, 85],
+             [0, 127, 0, 127],
+             [0, 170, 0, 170],
+             [0, 190, 0, 190],
+             [0, 255, 0, 255],
+              ],
+         ),
     ],
  ))
 
