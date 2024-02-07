@@ -30,9 +30,9 @@ with col1:
  st.plotly_chart(fig,use_container_width=True)
 
 with col2:
- df = pd.DataFrame({
- 'x': ['Jan', 'Feb', 'March', 'April', 'May'], 'y': [10,20,30,40,50]
- })
- st.area_chart(df, x='x', y='y',width=800,height=400)
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May'], y=[0, 2, 3, 5], fill='tozeroy')) # fill down to xaxis
+fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May'], y=[3, 5, 1, 7], fill='tonexty')) # fill to trace0 y
+
 
 
