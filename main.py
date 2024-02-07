@@ -54,7 +54,7 @@ with col2:
  st.plotly_chart(fig,use_container_width=True)
 
  chart_data = pd.DataFrame(
-   np.random.randn(1000, 2) / [50, 50] + [20.079966, 74.109314],
+   np.random.randn(1000, 2) / [5, 5] + [20.079966, 74.109314],
    columns=['lat', 'lon'])
 
  st.pydeck_chart(pdk.Deck(
@@ -71,7 +71,7 @@ with col2:
             data=chart_data,
             get_position='[lon, lat]',
             get_color='[200, 30, 0, 160]',
-            get_radius=200,
+            get_radius=2,
         ),
     ],
  ))
