@@ -31,10 +31,9 @@ fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
 st.plotly_chart(fig,width=800,height=400)
 
 with col2:
-# Create a dataframe
 df = pd.DataFrame({
-    'x': ['Jan', 'Feb', 'March', 'April', 'May'], 'y': [10,20,30,40,50]
- })
+ 'x': ['Jan', 'Feb', 'March', 'April', 'May'], 'y': [10,20,30,40,50]
+})
 
 # Create a line chart with area under the curve
 st.line_chart(df, x='x', y='y', area=True)
