@@ -70,7 +70,7 @@ with col2:
             "ScreenGridLayer",
             data=chart_data,
             get_position='[lon, lat]',
-            get_color='[200, 30, 0, 160]',
+            get_color='[100, 30, 0, 160]',
             pickable=False,
             opacity=0.8,
             cell_size_pixels=20,
