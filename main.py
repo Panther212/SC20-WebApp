@@ -58,7 +58,7 @@ with col2:
    columns=['lat', 'lon'])
 
  st.pydeck_chart(pdk.Deck(
-    map_style='mapbox://styles/mapbox/satellite-v9',
+    map_style='mapbox://styles/mapbox/satellite-streets-v12',
     initial_view_state=pdk.ViewState(
         latitude=20.079966,
         longitude=74.109314,
