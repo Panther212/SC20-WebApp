@@ -7,3 +7,4 @@ firebase_admin
 google-cloud-firestore
 numpy
 plotly
+pydeck 
