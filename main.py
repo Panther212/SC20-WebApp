@@ -30,7 +30,12 @@ with col1:
  fig.update_layout(
     title="Infestation Overview",
     width=800,
-    height=400,
+    height=500,
+    legend=dict(
+    yanchor="bottom",
+    y=0.99,
+    xanchor="right",
+    x=0.01)
  )
  st.plotly_chart(fig,use_container_width=True)
 
