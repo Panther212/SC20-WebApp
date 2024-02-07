@@ -64,6 +64,7 @@ with col2:
         longitude=74.109314,
         zoom=13,
         pitch=50,
+        height=500, width=500
     ),
     layers=[
      pdk.Layer(
