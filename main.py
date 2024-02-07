@@ -21,8 +21,8 @@ doc = doc_ref.get()
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
 with st.sidebar:
-    with st.echo():
-        st.write("This code will be printed to the sidebar.")
+    with st.header('_Streamlit_ is :blue[cool] :sunglasses:')
+
 
 
 col1, col2 = st.columns([2,2])
