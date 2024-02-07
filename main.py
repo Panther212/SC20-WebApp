@@ -30,8 +30,8 @@ with col1:
  st.plotly_chart(fig,use_container_width=True)
 
 with col2:
-fig = go.Figure()
-fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May'], y=[0, 2, 3, 5], fill='tozeroy')) # fill down to xaxis
-fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May'], y=[3, 5, 1, 7], fill='tonexty')) # fill to trace0 y
-st.plotly_chart(fig,use_container_width=True)
+ fig = go.Figure()
+ fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May'], y=[0, 2, 3, 5], fill='tozeroy')) # fill down to xaxis
+ fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May'], y=[3, 5, 1, 7], fill='tonexty')) # fill to trace0 y
+ st.plotly_chart(fig,use_container_width=True)
 
