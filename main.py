@@ -1,5 +1,8 @@
 import streamlit as st
 from google.cloud import firestore
+import firebase_admin
+from firebase_admin import credentials, db
+
  
 # Authenticate to Firestore with the JSON account key.
 db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
