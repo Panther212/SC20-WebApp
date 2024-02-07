@@ -71,7 +71,7 @@ with col2:
             data=chart_data,
             get_position='[lon, lat]',
             get_color='[200, 30, 0, 160]',
-            get_radius=2,
+            get_radius=20,
         ),
     ],
  ))
