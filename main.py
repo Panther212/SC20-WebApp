@@ -1,6 +1,7 @@
 import streamlit as st
 import firebase_admin
-from firebase_admin import credentials, db, firestore
+from firebase_admin import credentials, db
+from google.cloud import firestore
 
  
 # Authenticate to Firestore with the JSON account key.
