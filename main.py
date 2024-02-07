@@ -48,7 +48,7 @@ with col2:
     xaxis_title="Month",
     yaxis_title="Percentage Infestation",
     width=800,
-    height=400,
+    height=450,
  )
  st.plotly_chart(fig,use_container_width=True)
 
