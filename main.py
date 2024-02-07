@@ -4,6 +4,7 @@ import google.cloud
 from google.cloud import firestore
 import plotly.express as px
 import plotly.graph_objects as go
+import pandas as pd
 
 
 # Authenticate to Firestore with the JSON account key.
@@ -19,10 +20,23 @@ doc = doc_ref.get()
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
 
+col1, col2 = st.columns(3)
+
+with col1:
 labels = ['Oxygen','Hydrogen','Carbon_Dioxide','Nitrogen']
 values = [4500, 2500, 1053, 500]
 
     # Use `hole` to create a donut-like pie chart
 fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
 st.plotly_chart(fig,width=800,height=400)
+
+with col2:
+# Create a dataframe
+df = pd.DataFrame({'x': ['Jan', 'Feb', 'March', 'April', 'May'], 'y': [10,20,30,40,50]})
+
+# Create a line chart with area under the curve
+st.line_chart(df, x='x', y='y', area=True)
+
+
+
 
