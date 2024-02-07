@@ -29,8 +29,8 @@ with col1:
  fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
  fig.update_layout(
     title="Infestation Overview",
-    width=500,
-    height=500,
+    width=600,
+    height=400,
  )
  st.plotly_chart(fig,use_container_width=True)
 
@@ -42,8 +42,8 @@ with col2:
     title="6 Months Data",
     xaxis_title="Month",
     yaxis_title="Percentage Infestation",
-    width=500,
-    height=500,
+    width=600,
+    height=400,
  )
  st.plotly_chart(fig,use_container_width=True)
 
