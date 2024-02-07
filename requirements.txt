@@ -1,6 +1,5 @@
 altair
 pandas
 streamlit
-google.cloud
 google-cloud-firestore==0.31.0
-google
+
