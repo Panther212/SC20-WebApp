@@ -33,8 +33,6 @@ with col2:
  df = pd.DataFrame({
  'x': ['Jan', 'Feb', 'March', 'April', 'May'], 'y': [10,20,30,40,50]
  })
-
-# Create a line chart with area under the curve
-st.area_chart(df, x='x', y='y')
+ st.area_chart(df, x='x', y='y')
 
 
