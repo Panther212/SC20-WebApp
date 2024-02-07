@@ -33,7 +33,7 @@ with col1:
     height=500,
     legend=dict(
     yanchor="bottom",
-    y=0.99,
+    y=0.01,
     xanchor="right",
     x=0.01)
  )
