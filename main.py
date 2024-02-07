@@ -20,6 +20,10 @@ doc = doc_ref.get()
 # Let's see what we got!
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
+with st.sidebar:
+    with st.echo():
+        st.write("This code will be printed to the sidebar.")
+
 
 col1, col2 = st.columns([2,2])
 
