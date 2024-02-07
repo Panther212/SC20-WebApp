@@ -6,7 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 
-
+st.set_page_config(layout="wide")
 # Authenticate to Firestore with the JSON account key.
 db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
  
