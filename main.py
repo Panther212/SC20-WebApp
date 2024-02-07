@@ -1,6 +1,5 @@
 import streamlit as st
 import numpy as np
-from google.cloud import firestore
 
  
 # Authenticate to Firestore with the JSON account key.
