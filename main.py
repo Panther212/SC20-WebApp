@@ -5,6 +5,7 @@ from google.cloud import firestore
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+import pydeck as pdk
 
 st.set_page_config(layout="wide")
 # Authenticate to Firestore with the JSON account key.
