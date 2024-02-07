@@ -2,3 +2,5 @@ altair
 pandas
 streamlit
 google.cloud
+firestore
+google
