@@ -35,6 +35,6 @@ with col2:
  })
 
 # Create a line chart with area under the curve
-st.line_chart(df, x='x', y='y', area=True)
+st.area_chart(df, x='x', y='y', area=True)
 
 
