@@ -31,7 +31,7 @@ with col1:
 
 with col2:
  fig = go.Figure()
- fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[20, 40, 25, 10], fill='tozeroy',mode='none',name='Plot 1')) # fill down to xaxis
- fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[40, 60, 10, 40], fill='tonexty',mode='none',name='Plot 2')) # fill to trace0 y
+ fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[20, 40, 25, 10,50,35], fill='tozeroy',mode='none',name='Plot 1')) # fill down to xaxis
+ fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[40, 60, 10, 40,25,60], fill='tonexty',mode='none',name='Plot 2')) # fill to trace0 y
  st.plotly_chart(fig,use_container_width=True)
 
