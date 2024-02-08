@@ -39,7 +39,7 @@ with col1:
  fig.update_layout(
     title="Infestation Overview",
     width=800,
-    height=500,
+    height=400,
     legend=dict(
     yanchor="bottom",
     y=0.01,
