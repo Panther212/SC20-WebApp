@@ -48,6 +48,8 @@ with col1:
  )
  st.plotly_chart(fig,use_container_width=True)
 
+st.image('Frame 1 (1).jpg')
+
 with col2:
  fig = go.Figure()
  fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[20, 40, 25, 10,50,35], fill='tozeroy',mode='none',name='Plot 1')) # fill down to xaxis
