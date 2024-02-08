@@ -47,7 +47,7 @@ with col1:
     x=0.01)
  )
  st.plotly_chart(fig,use_container_width=True)
- st.image('Scans_Image.jpg',width =450)
+ st.image('Scans_Image.jpg',use_column_width=True)
 
 with col2:
  fig = go.Figure()
