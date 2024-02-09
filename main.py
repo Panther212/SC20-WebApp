@@ -82,9 +82,9 @@ with col1:
  Plots=['Plot 1', 'Plot 2']
 
  fig2 = go.Figure(data=[
-    go.Bar(name='Healthy', x=Plots, y=[20, 14, 23]),
-    go.Bar(name='Infected', x=Plots, y=[12, 18, 29]),
-    go.Bar(name='Suspicious', x=Plots, y=[12, 18, 29])
+    go.Bar(name='Healthy', x=Plots, y=[200, 180]),
+    go.Bar(name='Infected', x=Plots, y=[250, 150]),
+    go.Bar(name='Suspicious', x=Plots, y=[120, 180])
  ])
  # Change the bar mode
  fig2.update_layout(barmode='group')
