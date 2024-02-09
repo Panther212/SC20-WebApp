@@ -32,7 +32,7 @@ st.markdown(
     background-color: transparent;
 }
 .st-at {
-    background-color: #0c0080;
+    background-color: white;
 }
 footer {
     font-family: monospace;
