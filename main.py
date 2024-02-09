@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import pydeck as pdk
+import calendar
 
 st.set_page_config(layout="wide")
 # Authenticate to Firestore with the JSON account key.
@@ -28,6 +29,9 @@ Plot_2 = st.sidebar.write('Plot 2')
 Farm_2 = st.sidebar.subheader('Pimpalgaon Farm')
 Plot_3 = st.sidebar.write('Plot 1')
 Plot_4 = st.sidebar.write('Plot 2')
+year = 2022
+month = 3
+Calendar = st.sidebar.write(calendar.month)
 
 col1, col2 = st.columns([2,2])
 
