@@ -31,7 +31,7 @@ Plot_3 = st.sidebar.write('Plot 1')
 Plot_4 = st.sidebar.write('Plot 2')
 tc= calendar.TextCalendar(firstweekday=0)
 tc.formatmonth(2016, 5)
-
+tc
 col1, col2 = st.columns([2,2])
 
 with col1:
