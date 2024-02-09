@@ -67,11 +67,12 @@ with col1:
     title="Infestation Overview",
     width=800,
     height=455,
+    bgcolor="#FFCCCB,
     legend=dict(
     yanchor="bottom",
     y=0.01,
     xanchor="right",
-    x=0.01,bgcolor="#FFCCCB")
+    x=0.01)
  )
  colors = ['#4b4eb2', '#2fe2cc', '#1e5378', '#03d4fd']
  fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
