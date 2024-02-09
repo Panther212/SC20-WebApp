@@ -74,8 +74,8 @@ with col1:
     x=0.01)
  )
  fig.update_layout({
-  ‘plot_bgcolor’: ‘rgba(0, 0, 0, 0)’,
-  ‘paper_bgcolor’: ‘rgba(0, 0, 0, 0)’,
+  'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+  'paper_bgcolor': 'rgba(0, 0, 0, 0)',
  })
  colors = ['#4b4eb2', '#2fe2cc', '#1e5378', '#03d4fd']
  fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
