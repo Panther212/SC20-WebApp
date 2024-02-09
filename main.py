@@ -10,6 +10,20 @@ import calendar
 
 st.set_page_config(layout="wide")
 st.title('Farm Analytics')
+st.markdown(
+    """
+<style>
+.st-bb {
+    background-color: transparent;
+}
+.st-at {
+    background-color: #0c0080;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
 # Authenticate to Firestore with the JSON account key.
 db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
  
