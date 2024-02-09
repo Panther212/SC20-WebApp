@@ -21,6 +21,12 @@ doc = doc_ref.get()
 # Let's see what we got!
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
+st.markdown(f'''
+    <style>
+        section[data-testid="stSidebar"] .css-ng1t4o {{width: 14rem;}}
+        section[data-testid="stSidebar"] .css-1d391kg {{width: 14rem;}}
+    </style>
+''',unsafe_allow_html=True)
 Farmer_name= st.sidebar.header('Ramesh Kapare')
 
 Farm_1 = st.sidebar.subheader('Niphad Farm')
