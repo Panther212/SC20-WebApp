@@ -73,7 +73,7 @@ with col1:
     xanchor="right",
     x=0.01)
  )
- colors = ['#4b4eb2', 'mediumturquoise', 'darkorange', 'lightgreen']
+ colors = ['#4b4eb2', '#2fe2cc', '#1e5378', '#03d4fd']
  fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
                   marker=dict(colors=colors, line=dict(color='#000000', width=2)))
 
