@@ -80,15 +80,13 @@ with col1:
  st.plotly_chart(fig,use_container_width=True)
  #st.image('Scans_Image.jpg',width=620)
  Plots=['Plot 1', 'Plot 2']
-
- fig2 = go.Figure(data=[
+ fig3 = go.Figure(data=[
     go.Bar(name='Healthy', x=Plots, y=[200, 180]),
     go.Bar(name='Infected', x=Plots, y=[250, 150]),
     go.Bar(name='Suspicious', x=Plots, y=[120, 180])
  ])
- # Change the bar mode
- fig2.update_layout(barmode='group')
- st.plotly_chart(fig2,use_container_width=True)
+ fig3.update_layout(barmode='group')
+ st.plotly_chart(fig3,use_container_width=True)
 
 
 with col2:
