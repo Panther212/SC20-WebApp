@@ -31,7 +31,7 @@ Plot_3 = st.sidebar.write('Plot 1')
 Plot_4 = st.sidebar.write('Plot 2')
 year = 2022
 month = 3
-Calendar = st.sidebar.write(calendar.month)
+Calendar = st.sidebar.write(calendar.TextCalendar.formatmonth(year, month, w=0, l=0))
 
 col1, col2 = st.columns([2,2])
 
