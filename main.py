@@ -83,7 +83,7 @@ with col1:
 
  fig2 = go.Figure(data=[
     go.Bar(name='Healthy', x=animals, y=[20, 14, 23]),
-    go.Bar(name='Infected', x=animals, y=[12, 18, 29])
+    go.Bar(name='Infected', x=animals, y=[12, 18, 29]),
     go.Bar(name='Suspicious', x=animals, y=[12, 18, 29])
  ])
  # Change the bar mode
