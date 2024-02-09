@@ -32,7 +32,7 @@ st.markdown("""
 Farmer_image = st.sidebar.image('WhatsApp Image 2024-02-09 at 21.25.12_60b97c05.jpg')
 #Farmer_name= st.sidebar.header('Ramesh Kapare')
 st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Ramesh Kapare  </h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: white;'>Niphad Farm </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;'>Niphad Farm </h2>", unsafe_allow_html=True)
 Plot_1 = st.sidebar.write('Plot 15')
 Plot_2 = st.sidebar.write('Plot 2')
 Farm_2 = st.sidebar.subheader('Pimpalgaon Farm')
