@@ -34,9 +34,9 @@ Farmer_image = st.sidebar.image('WhatsApp Image 2024-02-09 at 21.25.12_60b97c05.
 st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Ramesh Kapare  </h1>", unsafe_allow_html=True)
 st.sidebar.markdown("<h2 style='text-align: center; color: white;'>Niphad Farm </h2>", unsafe_allow_html=True)
 st.sidebar.markdown("<h2 style='text-align: center; color: white;'>Plot number 1 </h2>", unsafe_allow_html=True)
-Plot_2 = st.sidebar.write('Plot 2')
-Farm_2 = st.sidebar.subheader('Pimpalgaon Farm')
-Plot_3 = st.sidebar.write('Plot 1')
+st.sidebar.markdown("<h2 style='text-align: center; color: white;'>Plot number 2 </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;'>Pimpalgaon Farm </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;'>Plot number 1 </h2>", unsafe_allow_html=True)
 # Convert the calendar data into a printable format
 cal_rows = [['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']]
 cal = calendar.monthcalendar(2024, 3)
