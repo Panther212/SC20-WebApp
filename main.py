@@ -78,7 +78,18 @@ with col1:
                   marker=dict(colors=colors, line=dict(color='#000000', width=2)))
 
  st.plotly_chart(fig,use_container_width=True)
- st.image('Scans_Image.jpg',width=620)
+ #st.image('Scans_Image.jpg',width=620)
+ Plots=['Plot 1', 'Plot 2']
+
+ fig2 = go.Figure(data=[
+    go.Bar(name='Healthy', x=animals, y=[20, 14, 23]),
+    go.Bar(name='Infected', x=animals, y=[12, 18, 29])
+    go.Bar(name='Suspicious', x=animals, y=[12, 18, 29])
+ ])
+ # Change the bar mode
+ fig2.update_layout(barmode='group')
+ st.plotly_chart(fig2,use_container_width=True)
+
 
 with col2:
  fig = go.Figure()
