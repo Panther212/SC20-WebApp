@@ -29,7 +29,7 @@ st.markdown(
     font-family: monospace;
 }
 .st-bb {
-    background-color: transparent;
+    background-color: white;
 }
 .st-at {
     background-color: white;
