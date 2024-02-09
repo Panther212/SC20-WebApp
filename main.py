@@ -86,7 +86,7 @@ with col1:
     go.Bar(name='Suspicious', x=Plots, y=[120, 180],marker_color='#25d9c4')
  ])
  fig3.update_layout(barmode='group',width=800,
-    height=600)
+    height=550)
  st.plotly_chart(fig3,use_container_width=True)
 
 
