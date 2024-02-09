@@ -39,6 +39,7 @@ for week in cal:
 st.sidebar.dataframe(cal_rows,hide_index = True )
 st.write(cal_rows)
 df = pd.DataFrame(cal_rows)
+df.drop(index=0)
 st.dataframe(df)
 st.dataframe(df.style.hide(axis="index"))
 st.markdown(df.style.hide(axis="index").to_html(), unsafe_allow_html=True)
