@@ -71,7 +71,7 @@ with col1:
     yanchor="bottom",
     y=0.01,
     xanchor="right",
-    x=0.01)
+    x=0.01,paper_bgcolor="#FFCCCB")
  )
  colors = ['#4b4eb2', '#2fe2cc', '#1e5378', '#03d4fd']
  fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
