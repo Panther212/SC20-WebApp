@@ -25,7 +25,7 @@ doc = doc_ref.get()
 st.markdown("""
 <style>
     [data-testid=stSidebar] {
-        background-color: #ff000050;
+        background-color: #1b1a28;
     }
 </style>
 """, unsafe_allow_html=True)
