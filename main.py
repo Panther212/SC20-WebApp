@@ -31,12 +31,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 Farmer_image = st.sidebar.image('WhatsApp Image 2024-02-09 at 21.25.12_60b97c05.jpg')
 #Farmer_name= st.sidebar.header('Ramesh Kapare')
-st.sidebar.markdown("<h1 style='text-align: center; color: white;font-size: 35px;'>Ramesh Kapare  </h1>", unsafe_allow_html=True)
-st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 30px;'>Niphad Farm </h2>", unsafe_allow_html=True)
-st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 25px;'>Plot number 1 </h2>", unsafe_allow_html=True)
-st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 25px'>Plot number 2 </h2>", unsafe_allow_html=True)
-st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 30px;'>Pimpalgaon Farm </h2>", unsafe_allow_html=True)
-st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 25px'>Plot number 1 </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h1 style='text-align: center; color: white;font-size: 32px;'>Ramesh Kapare  </h1>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 27px;'>Niphad Farm </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 22px;'>Plot number 1 </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 22px'>Plot number 2 </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 27px;'>Pimpalgaon Farm </h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 22px'>Plot number 1 </h2>", unsafe_allow_html=True)
 # Convert the calendar data into a printable format
 cal_rows = [['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']]
 cal = calendar.monthcalendar(2024, 3)
