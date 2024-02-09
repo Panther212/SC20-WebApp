@@ -73,6 +73,10 @@ with col1:
     xanchor="right",
     x=0.01)
  )
+ colors = ['gold', 'mediumturquoise', 'darkorange', 'lightgreen']
+ fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
+                  marker=dict(colors=colors, line=dict(color='#000000', width=2)))
+
  st.plotly_chart(fig,use_container_width=True)
  st.image('Scans_Image.jpg',width=620)
 
