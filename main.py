@@ -37,6 +37,7 @@ for week in cal:
 
 #Display the calendar using Streamlit components
 st.sidebar.dataframe(cal_rows,hide_index = True )
+st.write(cal_rows)
 df = pd.DataFrame(cal_rows)
 st.dataframe(df)
 st.dataframe(df.style.hide(axis="index"))
