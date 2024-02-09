@@ -67,7 +67,7 @@ with col1:
     title="Infestation Overview",
     width=800,
     height=455,
-    bgcolor="#FFCCCB,
+    bgcolor="#FFCCCB",
     legend=dict(
     yanchor="bottom",
     y=0.01,
