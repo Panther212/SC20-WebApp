@@ -85,7 +85,8 @@ with col1:
     go.Bar(name='Infected', x=Plots, y=[250, 150],marker_color='#773871'),
     go.Bar(name='Suspicious', x=Plots, y=[120, 180],marker_color='#25d9c4')
  ])
- fig3.update_layout(barmode='group')
+ fig3.update_layout(barmode='group',width=800,
+    height=455)
  st.plotly_chart(fig3,use_container_width=True)
 
 
