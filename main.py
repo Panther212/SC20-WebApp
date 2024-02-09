@@ -12,42 +12,15 @@ st.set_page_config(layout="wide")
 st.title('Farm Analytics')
 st.markdown(
     """
-<style>
-.reportview-container .markdown-text-container {
-    font-family: monospace;
-}
-.sidebar .sidebar-content {
-    background-image: linear-gradient(#2e7bcf,#2e7bcf);
-    color: white;
-}
-.Widget>label {
-    color: white;
-    font-family: monospace;
-}
-[class^="st-b"]  {
-    color: white;
-    font-family: monospace;
-}
-.st-bb {
-    background-color: white;
-}
-.st-at {
-    background-color: white;
-}
-footer {
-    font-family: monospace;
-}
-.reportview-container .main footer, .reportview-container .main footer a {
-    color:white;
-}
-header .decoration {
-    background-image: none;
-}
-
-</style>
-""",
+    <style>
+    .reportview-container {{
+        background-color: white;
+    }}
+    </style>
+    """,
     unsafe_allow_html=True,
-)
+  )
+
 # Authenticate to Firestore with the JSON account key.
 db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
  
