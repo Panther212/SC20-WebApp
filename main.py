@@ -22,9 +22,8 @@ doc = doc_ref.get()
 # Let's see what we got!
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
-
+Farmer_image = st.sidebar.image('WhatsApp Image 2024-02-09 at 21.25.12_60b97c05.jpg')
 Farmer_name= st.sidebar.header('Ramesh Kapare')
-
 Farm_1 = st.sidebar.subheader('Niphad Farm')
 Plot_1 = st.sidebar.write('Plot 15')
 Plot_2 = st.sidebar.write('Plot 2')
