@@ -8,4 +8,4 @@ google-cloud-firestore
 numpy
 plotly
 pydeck 
-calendar
+calendar==3.7
