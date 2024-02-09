@@ -30,7 +30,7 @@ Farm_2 = st.sidebar.subheader('Pimpalgaon Farm')
 Plot_3 = st.sidebar.write('Plot 1')
 # Convert the calendar data into a printable format
 cal_rows = [['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']]
-for week in cal:
+for week in cal_rows:
  cal_rows.append([str(day) if day != 0 else '' for day in week])
 # Display the calendar using Streamlit components
 st.sidebar.dataframe(cal_rows,hide_index = True, )
