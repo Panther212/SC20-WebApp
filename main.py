@@ -60,7 +60,7 @@ col1, col2 = st.columns([2,2])
 
 with col1:
  labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
- values = [24, 22, 26, 28]
+ values = [22, 24, 26, 28]
 
  fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
  fig.update_layout(
