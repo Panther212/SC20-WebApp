@@ -67,7 +67,10 @@ with col1:
     title="Infestation Overview",
     width=800,
     height=455,
-    bgcolor="#FFCCCB",
+    {
+    ‘plot_bgcolor’: ‘rgba(0, 0, 0, 0)’,
+    ‘paper_bgcolor’: ‘rgba(0, 0, 0, 0)’,
+     },
     legend=dict(
     yanchor="bottom",
     y=0.01,
