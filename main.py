@@ -91,6 +91,10 @@ with col1:
  ])
  fig3.update_layout(barmode='group',width=800,
     height=530,title='Comparative Analysis')
+ fig3.update_layout({
+  'plot_bgcolor': 'rgb(27, 26, 40)',
+  'paper_bgcolor': 'rgb(27, 26, 40)',
+ })
  st.plotly_chart(fig3,use_container_width=True)
 
 
@@ -105,6 +109,10 @@ with col2:
     width=800,
     height=450,
  )
+ fig.update_layout({
+  'plot_bgcolor': 'rgb(27, 26, 40)',
+  'paper_bgcolor': 'rgb(27, 26, 40)',
+ })
  st.plotly_chart(fig,use_container_width=True)
 
  chart_data = pd.DataFrame(
