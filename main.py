@@ -39,8 +39,9 @@ for week in cal:
 st.sidebar.dataframe(cal_rows,hide_index = True )
 st.write(cal_rows)
 df = pd.DataFrame(cal_rows)
-df.iloc[1: , :]
-df.reindex(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'])
+new_header = df.iloc[0] #grab the first row for the header
+df = df[1:] #take the data less the header row
+df.columns = new_header #set the header row as the df header
 st.dataframe(df)
 st.dataframe(df.style.hide(axis="index"))
 st.markdown(df.style.hide(axis="index").to_html(), unsafe_allow_html=True)
