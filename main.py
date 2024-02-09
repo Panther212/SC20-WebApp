@@ -30,7 +30,7 @@ Farm_2 = st.sidebar.subheader('Pimpalgaon Farm')
 Plot_3 = st.sidebar.write('Plot 1')
 Plot_4 = st.sidebar.write('Plot 2')
 tc= calendar.TextCalendar(firstweekday=0)
-st.table(tc.formatmonth(2016, 5))
+st.write(tc.formatmonth(2016, 5))
 
 col1, col2 = st.columns([2,2])
 
