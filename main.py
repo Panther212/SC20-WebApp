@@ -41,7 +41,7 @@ df = df[1:] #take the data less the header row
 df.columns = new_header #set the header row as the df header
 #Display the calendar using Streamlit components
 st.sidebar.dataframe(df,hide_index = True,width=500)
-
+'''
 st.markdown(
         """
        <style>
@@ -51,7 +51,8 @@ st.markdown(
        }
        """,
         unsafe_allow_html=True,
-    )   
+    )
+'''    
 #st.write(cal_rows)
 #st.dataframe(df)
 #st.dataframe(df.style.hide(axis="index"))
