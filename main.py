@@ -23,7 +23,7 @@ doc = doc_ref.get()
 Farmer_name= st.sidebar.header('Ramesh Kapare')
 
 Farm_1 = st.sidebar.subheader('Niphad Farm')
-Plot_1 = st.sidebar.write('Plot 1')
+Plot_1 = st.sidebar.write('Plot 15')
 Plot_2 = st.sidebar.write('Plot 2')
 Farm_2 = st.sidebar.subheader('Pimpalgaon Farm')
 Plot_3 = st.sidebar.write('Plot 1')
