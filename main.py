@@ -33,7 +33,7 @@ cal_rows = [['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']]
 for week in cal_rows:
  cal_rows.append([str(day) if day != 0 else '' for day in week])
 # Display the calendar using Streamlit components
-st.sidebar.dataframe(cal_rows,hide_index = True, )
+st.sidebar.dataframe(cal_rows,hide_index = True )
 df = pd.DataFrame(cal_rows)
 st.dataframe(df)
 st.dataframe(df.style.hide(axis="index"))
