@@ -33,7 +33,7 @@ cal = calendar.monthcalendar(2024, 3)
 # Convert the calendar data into a printable format
 cal_rows = [['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']]
 for week in cal:
-cal_rows.append([str(day) if day != 0 else '' for day in week])
+ cal_rows.append([str(day) if day != 0 else '' for day in week])
 # Display the calendar using Streamlit components
 st.table(cal_rows)
 
