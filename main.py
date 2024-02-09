@@ -29,9 +29,7 @@ Plot_2 = st.sidebar.write('Plot 2')
 Farm_2 = st.sidebar.subheader('Pimpalgaon Farm')
 Plot_3 = st.sidebar.write('Plot 1')
 Plot_4 = st.sidebar.write('Plot 2')
-year = 2022
-month = 3
-Calendar = st.sidebar.write(calendar.TextCalendar.formatmonth(year, month, w=0, l=0))
+Calendar = st.sidebar.write(calendar.TextCalendar.formatmonth(2024, 2, w=0, l=0))
 
 col1, col2 = st.columns([2,2])
 
