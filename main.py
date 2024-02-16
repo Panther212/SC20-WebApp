@@ -134,7 +134,7 @@ with col2:
  elif option == "This Month's Data":
     st.write('This Months Data')
     
- else option = "6 Months Data": 
+ elif option == "6 Months Data": 
     st.write('6 Months Data')
     
  chart_data = pd.DataFrame(
