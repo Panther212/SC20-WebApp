@@ -132,7 +132,7 @@ with col2:
  
 
  elif option == "This Month's Data":
-    st.write('This Month's Data')
+    st.write('This Months Data')
     
  elif option = "6 Months Data": 
     st.write('6 Months Data')
