@@ -114,11 +114,11 @@ with col2:
 
  if option == "This Week's Data":
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[20, 40, 25, 15,10,40], fill='tozeroy',mode='none',name='Plot 1',line_shape='spline')) # fill down to xaxis
-    fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[10, 15, 20, 35,28,15], fill='tonexty',mode='none',name='Plot 2',line_shape='spline')) # fill to trace0 y
+    fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[20, 40, 25, 15,10,40], fill='tozeroy',mode='none',name='Plot 1',line_shape='spline')) # fill down to xaxis
+    fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[10, 15, 20, 35,28,15], fill='tonexty',mode='none',name='Plot 2',line_shape='spline')) # fill to trace0 y
     fig.update_layout(
-       title="6 Months Data",
-       xaxis_title="Month",
+       title="This Week's Data",
+       xaxis_title="Day",
        yaxis_title="Percentage Infestation",
        width=800,
        height=450,
@@ -134,7 +134,21 @@ with col2:
     st.write('This Months Data')
     
  elif option == "6 Months Data": 
-    st.write('6 Months Data')
+     fig = go.Figure()
+     fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[20, 40, 25, 15,10,40], fill='tozeroy',mode='none',name='Plot 1',line_shape='spline')) # fill down to xaxis
+     fig.add_trace(go.Scatter(x=['Jan', 'Feb', 'March', 'April', 'May','June'], y=[10, 15, 20, 35,28,15], fill='tonexty',mode='none',name='Plot 2',line_shape='spline')) # fill to trace0 y
+     fig.update_layout(
+       title="6 Months Data",
+       xaxis_title="Month",
+       yaxis_title="Percentage Infestation",
+       width=800,
+       height=450,
+      )
+     fig.update_layout({
+     'plot_bgcolor': 'rgb(27, 26, 40)',
+     'paper_bgcolor': 'rgb(27, 26, 40)',
+     })
+     st.plotly_chart(fig,use_container_width=True)
     
  chart_data = pd.DataFrame(
    np.random.randn(5, 1) / [60, 60] + [20.079966, 74.109314],
