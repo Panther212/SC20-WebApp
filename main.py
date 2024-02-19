@@ -43,7 +43,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-image = Image.open('farmer_Image.jpg')
+image = Image.open('Farmer face in a circle.png')
 new_image = image.resize((200, 200))
 
 st.markdown(
