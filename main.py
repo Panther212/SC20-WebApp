@@ -44,7 +44,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 image = Image.open('AdobeStock_630068155_Preview-01.jpeg.jpg')
-new_image = image.resize((400, 400))
+new_image = image.resize((200, 200))
 st.sidebar.image(new_image)
 
 #Farmer_image = st.sidebar.image('AdobeStock_630068155_Preview-01.jpeg.jpg')
