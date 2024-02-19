@@ -92,9 +92,9 @@ st.sidebar.dataframe(df,hide_index = True,width=500)
 col1, col2 = st.columns([2,2])
 
 with col1:
- option = st.selectbox("Historical Analysis(Select timeframe):", ["This Week's Data", "This Month's Data", "6 Months Data"])
+ option = st.selectbox("Historical Analysis(Select timeframe):", ["1 Week Data", "This Month's Data", "6 Months Data"])
 
- if option == "This Week's Data":
+ if option == "1 Week Data":
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[20, 40, 25, 15,10,40], fill='tozeroy',mode='none',name='Plot 1',line_shape='spline')) # fill down to xaxis
     fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[10, 15, 20, 35,28,15], fill='tonexty',mode='none',name='Plot 2',line_shape='spline'))
