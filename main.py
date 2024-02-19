@@ -43,7 +43,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-image = Image.open('AdobeStock_630068155_Preview-01.jpeg.jpg')
+image = Image.open('farmer_Image.jpg')
 new_image = image.resize((200, 200))
 
 st.markdown(
