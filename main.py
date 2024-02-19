@@ -117,7 +117,7 @@ with col1:
  fig3 = go.Figure(data=[
     go.Bar(name='Healthy', x=Plots, y=[200, 180,10],marker_color='#3488a0'),
     go.Bar(name='Infected', x=Plots, y=[250, 150,10],marker_color='#773871'),
-    go.Bar(name='Suspicious', x=Plots, y=[120, 180,10],marker_color='#25d9c4')
+    #go.Bar(name='Suspicious', x=Plots, y=[120, 180,10],marker_color='#25d9c4')
  ])
  fig3.update_layout(barmode='group',width=800,
     height=530,title='Comparative Analysis')
