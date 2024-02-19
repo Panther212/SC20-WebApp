@@ -40,7 +40,7 @@ for doc in docs_ref:
     #data = list(result)
     #npTrees = np.array(data)
 
-st.write(np.max(npTrees));  
+#st.write(np.max(npTrees));  
 # Let's see what we got!
 #st.write("The id is: ", doc.id)
 #st.write("The contents are: ", doc.to_dict())
