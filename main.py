@@ -32,11 +32,11 @@ i=1
 df = pd.DataFrame()
 TreeNos_list = []
 for doc in docs_ref:
-    #TreeNos_arr_app = np.append(TreeNos_arr_app, (doc.to_dict()['TreeNo']));
     TreeNos_list.append(doc.to_dict()['TreeNo'])
-    #st.write(TreeNos)
+    
       
-st.write(np.max(np.array(TreeNos_list))); 
+Total_trees = np.max(np.array(TreeNos_list)); 
+TreeNos_list;
     #result = TreeNos.items()
     #data = list(result)
     #npTrees = np.array(data)
