@@ -94,7 +94,7 @@ with col1:
 
  st.plotly_chart(fig,use_container_width=True)
  #st.image('Scans_Image.jpg',width=620)
- Plots=['Plot 1', 'Plot 2']
+ Plots=['Plot 1', 'Plot 2', 'Plot 3']
  fig3 = go.Figure(data=[
     go.Bar(name='Healthy', x=Plots, y=[200, 180],marker_color='#3488a0'),
     go.Bar(name='Infected', x=Plots, y=[250, 150],marker_color='#773871'),
