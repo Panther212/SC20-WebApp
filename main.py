@@ -71,46 +71,6 @@ st.sidebar.dataframe(df,hide_index = True,width=500)
 col1, col2 = st.columns([2,2])
 
 with col1:
- labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
- values = [28, 26, 24, 22]
-
- fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
- fig.update_layout(
-    title="Infestation Overview",
-    width=800,
-    height=455,
-    legend=dict(
-    yanchor="bottom",
-    y=0.01,
-    xanchor="right",
-    x=0.01)
- )
- fig.update_layout({
-  'plot_bgcolor': 'rgb(27, 26, 40)',
-  'paper_bgcolor': 'rgb(27, 26, 40)',
- })
- colors = ['#4b4eb2', '#2fe2cc', '#1e5378', '#03d4fd']
- fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
-                  marker=dict(colors=colors, line=dict(color='#000000', width=2)))
-
- st.plotly_chart(fig,use_container_width=True)
- #st.image('Scans_Image.jpg',width=620)
- Plots=['Plot 1', 'Plot 2', 'Plot 3']
- fig3 = go.Figure(data=[
-    go.Bar(name='Healthy', x=Plots, y=[200, 180,10],marker_color='#3488a0'),
-    go.Bar(name='Infected', x=Plots, y=[250, 150,10],marker_color='#773871'),
-    go.Bar(name='Suspicious', x=Plots, y=[120, 180,10],marker_color='#25d9c4')
- ])
- fig3.update_layout(barmode='group',width=800,
-    height=530,title='Comparative Analysis')
- fig3.update_layout({
-  'plot_bgcolor': 'rgb(27, 26, 40)',
-  'paper_bgcolor': 'rgb(27, 26, 40)',
- })
- st.plotly_chart(fig3,use_container_width=True)
-
-
-with col2:
  option = st.selectbox("Historical Analysis(Select timeframe):", ["This Week's Data", "This Month's Data", "6 Months Data"])
 
  if option == "This Week's Data":
@@ -151,6 +111,47 @@ with col2:
      'paper_bgcolor': 'rgb(27, 26, 40)',
      })
      st.plotly_chart(fig,use_container_width=True)
+ 
+ #st.image('Scans_Image.jpg',width=620)
+ Plots=['Plot 1', 'Plot 2', 'Plot 3']
+ fig3 = go.Figure(data=[
+    go.Bar(name='Healthy', x=Plots, y=[200, 180,10],marker_color='#3488a0'),
+    go.Bar(name='Infected', x=Plots, y=[250, 150,10],marker_color='#773871'),
+    go.Bar(name='Suspicious', x=Plots, y=[120, 180,10],marker_color='#25d9c4')
+ ])
+ fig3.update_layout(barmode='group',width=800,
+    height=530,title='Comparative Analysis')
+ fig3.update_layout({
+  'plot_bgcolor': 'rgb(27, 26, 40)',
+  'paper_bgcolor': 'rgb(27, 26, 40)',
+ })
+ st.plotly_chart(fig3,use_container_width=True)
+
+
+with col2:
+ labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
+ values = [28, 26, 24, 22]
+
+ fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
+ fig.update_layout(
+    title="Infestation Overview",
+    width=800,
+    height=455,
+    legend=dict(
+    yanchor="bottom",
+    y=0.01,
+    xanchor="right",
+    x=0.01)
+ )
+ fig.update_layout({
+  'plot_bgcolor': 'rgb(27, 26, 40)',
+  'paper_bgcolor': 'rgb(27, 26, 40)',
+ })
+ colors = ['#4b4eb2', '#2fe2cc', '#1e5378', '#03d4fd']
+ fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
+                  marker=dict(colors=colors, line=dict(color='#000000', width=2)))
+
+ st.plotly_chart(fig,use_container_width=True)
     
  chart_data = pd.DataFrame(
    np.random.randn(5, 1) / [60, 60] + [20.079966, 74.109314],
