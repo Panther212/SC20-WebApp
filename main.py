@@ -45,8 +45,22 @@ st.markdown("""
 
 image = Image.open('AdobeStock_630068155_Preview-01.jpeg.jpg')
 new_image = image.resize((200, 200))
-st.sidebar.image(new_image)
 
+st.markdown(
+    """
+    <style>
+        [data-testid=stSidebar] [data-testid=stImage]{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
+
+st.sidebar.image(new_image)
 #Farmer_image = st.sidebar.image('AdobeStock_630068155_Preview-01.jpeg.jpg')
 #Farmer_name= st.sidebar.header('Ramesh Kapare')
 st.sidebar.markdown("<h1 style='text-align: center; color: white;font-size: 32px;'>Ramesh Kapare  </h1>", unsafe_allow_html=True)
