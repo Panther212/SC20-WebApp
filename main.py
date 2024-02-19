@@ -36,7 +36,7 @@ for doc in docs_ref:
     TreeNos_list.append(doc.to_dict()['TreeNo'])
     #st.write(TreeNos)
       
-st.write(np.array(TreeNos_list).max); 
+st.write(np.max(np.array(TreeNos_list))); 
     #result = TreeNos.items()
     #data = list(result)
     #npTrees = np.array(data)
