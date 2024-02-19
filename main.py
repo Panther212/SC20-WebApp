@@ -96,9 +96,9 @@ with col1:
  #st.image('Scans_Image.jpg',width=620)
  Plots=['Plot 1', 'Plot 2', 'Plot 3']
  fig3 = go.Figure(data=[
-    go.Bar(name='Healthy', x=Plots, y=[200, 180],marker_color='#3488a0'),
-    go.Bar(name='Infected', x=Plots, y=[250, 150],marker_color='#773871'),
-    go.Bar(name='Suspicious', x=Plots, y=[120, 180],marker_color='#25d9c4')
+    go.Bar(name='Healthy', x=Plots, y=[200, 180,150],marker_color='#3488a0'),
+    go.Bar(name='Infected', x=Plots, y=[250, 150,180],marker_color='#773871'),
+    go.Bar(name='Suspicious', x=Plots, y=[120, 180,200],marker_color='#25d9c4')
  ])
  fig3.update_layout(barmode='group',width=800,
     height=530,title='Comparative Analysis')
