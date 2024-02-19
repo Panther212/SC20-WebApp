@@ -100,7 +100,7 @@ with col1:
     fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[10, 15, 20, 35,28,15], fill='tonexty',mode='none',name='Plot 2',line_shape='spline'))
     fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[0, 0, 0, 50,0,0], fill='tozeroy',mode='none',name='Plot 3',line_shape='spline'))# fill to trace0 y
     fig.update_layout(
-       title="This Week's Data",
+       title="1 Week Data",
        xaxis_title="Day",
        yaxis_title="Percentage Infestation",
        width=800,
