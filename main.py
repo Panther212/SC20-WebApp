@@ -40,7 +40,7 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-Farmer_image = st.sidebar.image('AdobeStock_630068155_Preview.jpeg')
+Farmer_image = st.sidebar.image('AdobeStock_630068155_Preview-01.jpeg.jpg')
 #Farmer_name= st.sidebar.header('Ramesh Kapare')
 st.sidebar.markdown("<h1 style='text-align: center; color: white;font-size: 32px;'>Ramesh Kapare  </h1>", unsafe_allow_html=True)
 st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 25px;'>Niphad Farm </h2>", unsafe_allow_html=True)
