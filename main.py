@@ -30,12 +30,13 @@ db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-admins
 docs_ref = db.collection("DevMode").stream()
 i=1 
 df = pd.DataFrame()
-#TreeNos_arr = np.array(100); 
+TreeNos_list = []
 for doc in docs_ref:
-    TreeNos_arr_app = np.append(TreeNos_arr_app, (doc.to_dict()['TreeNo']));
+    #TreeNos_arr_app = np.append(TreeNos_arr_app, (doc.to_dict()['TreeNo']));
+    TreeNos_list.append(doc.to_dict()['TreeNo'])
     #st.write(TreeNos)
       
-st.write(TreeNos_arr_app); 
+st.write(np.array(TreeNos_list).max); 
     #result = TreeNos.items()
     #data = list(result)
     #npTrees = np.array(data)
