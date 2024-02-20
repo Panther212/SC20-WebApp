@@ -37,7 +37,6 @@ for doc in docs_ref:
       
 Total_trees = np.max(np.array(TreeNos_list)); 
 
-field_filter = FieldFilter("TreeNo", "==", count)
 field_filter2 = FieldFilter("InfStat", "==", 'Infected');
 # Simple "where" query as in your example
 query_on_single_field = collection_ref.where(filter=field_filter)
@@ -46,7 +45,7 @@ query_on_single_field = collection_ref.where(filter=field_filter)
 count = 1;
 no_inf = 0; 
 while (count <= Total_trees):
-    query = db.collection('DevMode').where(filter=field_filter).where(filter=field_filter2);
+    query = db.collection('DevMode').where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
     count_query=query.count().get(); 
     nb_docs=count_query[0][0].value;
     if nb_docs > 0: 
