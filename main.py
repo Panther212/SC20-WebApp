@@ -10,6 +10,9 @@ import calendar
 from PIL import Image
 from google.cloud.firestore_v1.base_query import FieldFilter
 import datetime
+import json
+
+
 
 st.set_page_config(layout="wide")
 st.title('Farm Analytics')
@@ -25,15 +28,18 @@ st.markdown(
   )
 
 # Authenticate to Firestore with the JSON account key.
-db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
+#db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
+key_dict = json.loads(st.secrets["textkey"])
+creds = service_account.Credentials.from_service_account_info(key_dict)
+db = firestore.Client(credentials=creds, project="testdata1-20ec5")
  
 # Create a reference to the all the docs 
 docs_ref = db.collection("DevMode").stream()
 i=1 
 df = pd.DataFrame()
 TreeNos_list = []
-for doc in docs_ref:
-    TreeNos_list.append(doc.to_dict()['TreeNo'])
+#for doc in docs_ref:
+    #TreeNos_list.append(doc.to_dict()['TreeNo'])
     #date = doc.to_dict()['timestamp']
     
       
@@ -55,7 +61,7 @@ while (count <= Total_trees):
      
 
 #query = db.collection('DevMode').where('TreeNo', '==', 1)
-
+st.write(no_inf);
 Inf_per = (no_inf/Total_trees)*100; 
 
 #timestamp = db.collection("DevMode").doc('T1R1S1').get('timestamp');
