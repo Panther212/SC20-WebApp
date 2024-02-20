@@ -40,7 +40,7 @@ Total_trees = np.max(np.array(TreeNos_list));
 count = 1;
 no_inf = 0; 
 while (count <= Total_trees):
-    query = db.collection('DevMode').where('TreeNo', '==', count).where('InfStat', '==', 'Infected');
+    query = db.collection('DevMode').where(filter=FieldFilter('TreeNo', '==', count)).where(filter=FieldFilter('InfStat', '==', 'Infected'));
     count_query=query.count().get(); 
     nb_docs=count_query[0][0].value;
     if nb_docs > 0: 
