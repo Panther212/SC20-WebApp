@@ -36,11 +36,20 @@ for doc in docs_ref:
     
       
 Total_trees = np.max(np.array(TreeNos_list)); 
-st.write(Total_trees);
-query = db.collection('DevMode').where('TreeNo', '==', 1)
-count=query.count().get() ; 
-nb_docs=count[0][0].value;
-st.write(nb_docs);
+#st.write(Total_trees);
+count = 1;
+no_inf = 0; 
+while (count <= Total_trees):
+    query = db.collection('DevMode').where('TreeNo', '==', count).where('InfStat', '==', 'Infected');
+    count_query=query.count().get(); 
+    nb_docs=count_query[0][0].value;
+    if nb_docs > 0: 
+        no_inf++; 
+     
+
+#query = db.collection('DevMode').where('TreeNo', '==', 1)
+
+st.write(no_inf);
 
     #result = TreeNos.items()
     #data = list(result)
