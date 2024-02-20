@@ -8,7 +8,7 @@ import pandas as pd
 import pydeck as pdk
 import calendar
 from PIL import Image
-
+from google.cloud.firestore_v1.base_query import FieldFilter
 
 st.set_page_config(layout="wide")
 st.title('Farm Analytics')
@@ -36,11 +36,17 @@ for doc in docs_ref:
     
       
 Total_trees = np.max(np.array(TreeNos_list)); 
+
+field_filter = FieldFilter("TreeNo", "==", count)
+field_filter2 = FieldFilter("InfStat", "==", 'Infected');
+# Simple "where" query as in your example
+query_on_single_field = collection_ref.where(filter=field_filter)
+
 #st.write(Total_trees);
 count = 1;
 no_inf = 0; 
 while (count <= Total_trees):
-    query = db.collection('DevMode').where('TreeNo', '==', count).where('InfStat', '==', 'Infected');
+    query = db.collection('DevMode').where(filter=field_filter).where(filter=field_filter2);
     count_query=query.count().get(); 
     nb_docs=count_query[0][0].value;
     if nb_docs > 0: 
