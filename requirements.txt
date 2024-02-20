@@ -10,4 +10,3 @@ plotly
 pydeck 
 Pillow
 datetime
-json
