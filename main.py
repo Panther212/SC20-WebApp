@@ -46,7 +46,7 @@ while (count <= Total_trees):
     query = db.collection('DevMode').where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
     count_query=query.count().get(); 
     nb_docs=count_query[0][0].value;
-    count++; 
+    count+=1 
     if nb_docs > 0: 
         no_inf+=1
      
