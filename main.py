@@ -34,9 +34,11 @@ df = pd.DataFrame()
 TreeNos_list = []
 for doc in docs_ref:
     TreeNos_list.append(doc.to_dict()['TreeNo'])
+    date = doc.to_dict()['timestamp']
     
       
 Total_trees = np.max(np.array(TreeNos_list)); 
+st.write(date);
 
 field_filter2 = FieldFilter("InfStat", "==", 'Infected');
 
