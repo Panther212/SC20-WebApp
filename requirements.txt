@@ -8,4 +8,4 @@ google-cloud-firestore
 numpy
 plotly
 pydeck 
-PIL
+Pillow
