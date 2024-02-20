@@ -55,12 +55,11 @@ while (count <= Total_trees):
 #query = db.collection('DevMode').where('TreeNo', '==', 1)
 
 Inf_per = (no_inf/Total_trees)*100; 
-"""
-timestamp = db.collection("DevMode").doc('T1R1S1').get('timestamp');
-date = datetime.datetime.fromtimestamp(timestamp.seconds)
-dayOfWeek = date.weekday()
-st.write(dayOfWeek);
-"""
+
+#timestamp = db.collection("DevMode").doc('T1R1S1').get('timestamp');
+#date = datetime.datetime.fromtimestamp(timestamp.seconds)
+#dayOfWeek = date.weekday()
+#st.write(dayOfWeek);
     #result = TreeNos.items()
     #data = list(result)
     #npTrees = np.array(data)
