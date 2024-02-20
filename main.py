@@ -38,8 +38,6 @@ for doc in docs_ref:
 Total_trees = np.max(np.array(TreeNos_list)); 
 
 field_filter2 = FieldFilter("InfStat", "==", 'Infected');
-# Simple "where" query as in your example
-query_on_single_field = collection_ref.where(filter=field_filter)
 
 #st.write(Total_trees);
 count = 1;
