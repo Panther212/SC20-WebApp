@@ -56,7 +56,7 @@ while (count <= Total_trees):
 
 Inf_per = (no_inf/Total_trees)*100; 
 
-timestamp = db.collection("DevMode").doc('T1R1S1').to_dict()['timestamp'].get('timestamp');
+timestamp = db.collection("DevMode").doc('T1R1S1').get('timestamp');
 date = datetime.datetime.fromtimestamp(timestamp.seconds)
 dayOfWeek = date.weekday()
 st.write(dayOfWeek);
