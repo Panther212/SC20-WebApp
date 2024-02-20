@@ -1,8 +1,8 @@
 altair
 pandas
 streamlit
-google-api-core==1.22.1 
-google-auth==1.20.1
+google-api-core
+google-auth
 firebase_admin==6.1.0
 google-cloud-firestore
 numpy
