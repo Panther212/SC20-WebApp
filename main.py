@@ -36,7 +36,12 @@ for doc in docs_ref:
     
       
 Total_trees = np.max(np.array(TreeNos_list)); 
-TreeNos_list;
+st.write(Total_trees);
+query = db.collection('DevMode').where('TreeID', '==', '1')
+count=query.count().get() ; 
+nb_docs=count[0][0].value;
+st.write(nb_docs);
+
     #result = TreeNos.items()
     #data = list(result)
     #npTrees = np.array(data)
