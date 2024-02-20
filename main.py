@@ -9,6 +9,7 @@ import pydeck as pdk
 import calendar
 from PIL import Image
 from google.cloud.firestore_v1.base_query import FieldFilter
+import datetime
 
 st.set_page_config(layout="wide")
 st.title('Farm Analytics')
@@ -54,6 +55,11 @@ while (count <= Total_trees):
 #query = db.collection('DevMode').where('TreeNo', '==', 1)
 
 Inf_per = (no_inf/Total_trees)*100; 
+
+timestamp = db.collection("DevMode").doc('T1T1S1').to_dict()['timestamp'];
+date = datetime.datetime.fromtimestamp(timestamp.seconds)
+dayOfWeek = date.weekday()
+st.write(dayOfWeek);
 
     #result = TreeNos.items()
     #data = list(result)
