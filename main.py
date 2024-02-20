@@ -10,7 +10,7 @@ import calendar
 from PIL import Image
 from google.cloud.firestore_v1.base_query import FieldFilter
 import datetime
-import json
+#import json
 
 
 
@@ -28,10 +28,10 @@ st.markdown(
   )
 
 # Authenticate to Firestore with the JSON account key.
-#db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
-key_dict = json.loads(st.secrets["textkey"])
-creds = service_account.Credentials.from_service_account_info(key_dict)
-db = firestore.Client(credentials=creds, project="TestData1")
+db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
+#key_dict = json.loads(st.secrets["textkey"])
+#creds = service_account.Credentials.from_service_account_info(key_dict)
+#db = firestore.Client(credentials=creds, project="TestData1")
  
 # Create a reference to the all the docs 
 docs_ref = db.collection("DevMode").stream()
