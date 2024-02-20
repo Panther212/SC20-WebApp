@@ -31,7 +31,7 @@ st.markdown(
 #db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
 key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
-db = firestore.Client(credentials=creds, project="testdata1-20ec5")
+db = firestore.Client(credentials=creds, project="TestData1")
  
 # Create a reference to the all the docs 
 docs_ref = db.collection("DevMode").stream()
