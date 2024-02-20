@@ -8,7 +8,7 @@ import pandas as pd
 import pydeck as pdk
 import calendar
 from PIL import Image
-from google.cloud.firestore_v1.base_query import FieldFilter
+#from google.cloud.firestore_v1.base_query import FieldFilter
 import datetime
 #import json
 
