@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import google.cloud
-from google.cloud import firestore
+from firebase_admin import firestore
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
