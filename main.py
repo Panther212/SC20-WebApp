@@ -43,14 +43,15 @@ TreeNos_list = []
     #date = doc.to_dict()['timestamp']
     
       
-Total_trees = np.max(np.array(TreeNos_list)); 
-st.write(date);
+#Total_trees = np.max(np.array(TreeNos_list)); 
+#st.write(date);
 
-field_filter2 = FieldFilter("InfStat", "==", 'Infected');
+#field_filter2 = FieldFilter("InfStat", "==", 'Infected');
 
 #st.write(Total_trees);
-count = 1;
-no_inf = 0; 
+#count = 1;
+#no_inf = 0; 
+"""
 while (count <= Total_trees):
     query = db.collection('DevMode').where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
     count_query=query.count().get(); 
@@ -71,7 +72,7 @@ Inf_per = (no_inf/Total_trees)*100;
     #result = TreeNos.items()
     #data = list(result)
     #npTrees = np.array(data)
-
+"""
 #st.write(np.max(npTrees));  
 # Let's see what we got!
 #st.write("The id is: ", doc.id)
