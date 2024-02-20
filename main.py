@@ -8,9 +8,9 @@ import pandas as pd
 import pydeck as pdk
 import calendar
 from PIL import Image
-#from google.cloud.firestore_v1.base_query import FieldFilter
+from google.cloud.firestore import FieldFilter
 import datetime
-#import json
+import json
 
 
 
@@ -38,20 +38,20 @@ docs_ref = db.collection("DevMode").stream()
 i=1 
 df = pd.DataFrame()
 TreeNos_list = []
-#for doc in docs_ref:
-    #TreeNos_list.append(doc.to_dict()['TreeNo'])
-    #date = doc.to_dict()['timestamp']
+for doc in docs_ref:
+    TreeNos_list.append(doc.to_dict()['TreeNo'])
+    timestamp = doc.to_dict()['timestamp']
     
-      
-#Total_trees = np.max(np.array(TreeNos_list)); 
-#st.write(date);
-
-#field_filter2 = FieldFilter("InfStat", "==", 'Infected');
+#date = docs_ref[0].to_dict()['timestamp']
+#year,month,day = timestamp.year,timestamp.month,timestamp.day
+Total_trees = np.max(np.array(TreeNos_list)); 
+#st.write(timestamp.weekday());
+field_filter2 = FieldFilter("InfStat", "==", 'Infected');
 
 #st.write(Total_trees);
-#count = 1;
-#no_inf = 0; 
-"""
+count = 1;
+no_inf = 0; 
+
 while (count <= Total_trees):
     query = db.collection('DevMode').where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
     count_query=query.count().get(); 
@@ -61,50 +61,43 @@ while (count <= Total_trees):
         no_inf+=1
      
 
-#query = db.collection('DevMode').where('TreeNo', '==', 1)
-st.write(no_inf);
 Inf_per = (no_inf/Total_trees)*100; 
+no_healthy = Total_trees - no_inf; 
 
-#timestamp = db.collection("DevMode").doc('T1R1S1').get('timestamp');
+
 #date = datetime.datetime.fromtimestamp(timestamp.seconds)
 #dayOfWeek = date.weekday()
 #st.write(dayOfWeek);
     #result = TreeNos.items()
     #data = list(result)
     #npTrees = np.array(data)
-"""
+
 #st.write(np.max(npTrees));  
-# Let's see what we got!
-#st.write("The id is: ", doc.id)
-#st.write("The contents are: ", doc.to_dict())
+
+st.markdown("""
+
+<style>
+    [data-testid=stSidebar] {
+        background-color: #1b1a28;
+    }
+</style>
+
+ """, 
+unsafe_allow_html=True)
+
+image = Image.open('Farmer face in a circle.png')
+new_image = image.resize((200, 200))
+
 st.markdown("""
 <style>
     [data-testid=stSidebar] {
         background-color: #1b1a28;
     }
 </style>
-""", unsafe_allow_html=True)
-
-image = Image.open('Farmer face in a circle.png')
-new_image = image.resize((200, 200))
-
-st.markdown(
-    """
-    <style>
-        [data-testid=stSidebar] [data-testid=stImage]{
-            text-align: center;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-    </style>
-    """, unsafe_allow_html=True
-)
+ """, unsafe_allow_html=True)
 
 st.sidebar.image(new_image)
-#Farmer_image = st.sidebar.image('AdobeStock_630068155_Preview-01.jpeg.jpg')
-#Farmer_name= st.sidebar.header('Ramesh Kapare')
+
 st.sidebar.markdown("<h1 style='text-align: center; color: white;font-size: 32px;'>Ramesh Kapare  </h1>", unsafe_allow_html=True)
 st.sidebar.markdown("<h2 style='text-align: center; color: white;font-size: 25px;'>Niphad Farm </h2>", unsafe_allow_html=True)
 st.sidebar.markdown("<h2 style='text-align: center; color: #247370;font-size: 19px;'>Plot number 1 </h2>", unsafe_allow_html=True)
@@ -138,9 +131,12 @@ with col1:
 
  if option == "1 Week Data":
     fig = go.Figure()
+    plot3_y = [0,0,0,0,0,0]
+    plot3_y[timestamp.weekday()] = no_inf; 
     fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[20, 40, 25, 15,10,40], fill='tozeroy',mode='none',name='Plot 1',line_shape='spline')) # fill down to xaxis
     fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[10, 15, 20, 35,28,15], fill='tonexty',mode='none',name='Plot 2',line_shape='spline'))
-    fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=[0, 0, 0, 50,0,0], fill='tozeroy',mode='none',name='Plot 3',line_shape='spline'))# fill to trace0 y
+    fig.add_trace(go.Scatter(x=['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'], y=plot3_y, fill='tozeroy',mode='none',name='Plot 3',line_shape='spline'))# fill to trace0 y
+    fig.update_traces()
     fig.update_layout(
        title="1 Week Data",
        xaxis_title="Day",
@@ -178,8 +174,8 @@ with col1:
  #st.image('Scans_Image.jpg',width=620)
  Plots=['Plot 1', 'Plot 2', 'Plot 3']
  fig3 = go.Figure(data=[
-    go.Bar(name='Healthy', x=Plots, y=[200, 180,10],marker_color='#3488a0'),
-    go.Bar(name='Infected', x=Plots, y=[250, 150,10],marker_color='#773871'),
+    go.Bar(name='Healthy', x=Plots, y=[200, 180,no_healthy],marker_color='#3488a0'),
+    go.Bar(name='Infected', x=Plots, y=[250, 150,no_inf],marker_color='#773871'),
     #go.Bar(name='Suspicious', x=Plots, y=[120, 180,10],marker_color='#25d9c4')
  ])
  fig3.update_layout(barmode='group',width=800,
@@ -249,4 +245,3 @@ with col2:
          ),
     ],
  ))
-
