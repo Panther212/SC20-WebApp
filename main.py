@@ -48,7 +48,6 @@ Total_trees = np.max(np.array(TreeNos_list));
 #st.write(timestamp.weekday());
 field_filter2 = FieldFilter("InfStat", "==", 'Infected');
 
-#st.write(Total_trees);
 count = 1;
 no_inf = 0; 
 
