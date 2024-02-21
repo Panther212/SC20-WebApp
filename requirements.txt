@@ -10,5 +10,3 @@ plotly
 pydeck 
 Pillow
 datetime
-google.cloud.firestore_v1.base_query
-json
