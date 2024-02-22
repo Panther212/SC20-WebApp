@@ -140,7 +140,7 @@ st.sidebar.dataframe(df,hide_index = True,width=500)
 col1, col2 = st.columns([2,2])
 
 with col1:
- st.write(timestamp)   
+ #st.write(timestamp)   
  option = st.selectbox("Historical Analysis(Select timeframe):", ["1 Week Data", "This Month's Data", "6 Months Data"])
 
  if option == "1 Week Data":
