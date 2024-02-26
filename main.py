@@ -128,6 +128,12 @@ df = df[1:] #take the data less the header row
 df.columns = new_header #set the header row as the df header
 #Display the calendar using Streamlit components
 st.sidebar.dataframe(df,hide_index = True,width=500)
+def v_spacer(height, sb=False) -> None:
+    for _ in range(height):
+        if sb:
+            st.sidebar.write('\n')
+        else:
+            st.write('\n')
 #st.write(cal_rows)
 #st.dataframe(df)
 #st.dataframe(df.style.hide(axis="index"))
@@ -211,10 +217,7 @@ with col1:
 
 
 with col2:
- st.text("fdgdgf")
- st.text("")
- st.text("")
- st.text("")
+ v_spacer(height=10, sb=True)
  labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
  values = [28, 26, 24, 22]
 
