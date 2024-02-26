@@ -59,7 +59,7 @@ count = 1;
 no_inf = 0; 
 
 while (count <= Total_trees):
-    query = db.collection('DevMode').where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
+    query = db.collection('DevMode').where(filter=FieldFilter("RowNo", "==", 4)).where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
     count_query=query.count().get(); 
     nb_docs=count_query[0][0].value;
     count+=1 
