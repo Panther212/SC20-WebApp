@@ -211,6 +211,10 @@ with col1:
 
 
 with col2:
+ st.text("")
+ st.text("")
+ st.text("")
+ st.text("")
  labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
  values = [28, 26, 24, 22]
 
