@@ -15,17 +15,7 @@ import json
 
 
 st.set_page_config(layout="wide")
-st.title('Farm Analytics')
-st.markdown(
-    """
-    <style>
-    .reportview-container {{
-        background-color: white;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-  )
+
 
 # Authenticate to Firestore with the JSON account key.
 db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json")
@@ -147,6 +137,17 @@ st.sidebar.dataframe(df,hide_index = True,width=500)
 col1, col2 = st.columns([2,2])
 
 with col1:
+ st.title('Farm Analytics')
+ st.markdown(
+    """
+    <style>
+    .reportview-container {{
+        background-color: white;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+  )   
  #st.write(timestamp)   
  option = st.selectbox("Historical Analysis(Select timeframe):", ["1 Week Data", "This Month's Data", "6 Months Data"])
  #st.write(timestamp.weekday())   
