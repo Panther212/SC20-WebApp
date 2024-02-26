@@ -217,13 +217,6 @@ with col1:
 
 
 with col2:
- df = None
- with st.modal(label_ok_button, label_cancel_button) as m: 
-    m.header("Hello world, input your file")
-    f = m.file_uploader(...)
-    while not f:
-        m.markdown("Waiting for your input")
-    df = process_file(f)
  st.markdown('##')
  st.markdown('##')
  st.markdown('##')
