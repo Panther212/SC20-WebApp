@@ -217,7 +217,7 @@ with col1:
 
 
 with col2:
- v_spacer(height=10, sb=True)
+ st.markdown('##')
  labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
  values = [28, 26, 24, 22]
 
