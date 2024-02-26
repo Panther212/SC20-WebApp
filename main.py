@@ -224,10 +224,10 @@ with col2:
  st.markdown('##')
  st.markdown('##')
  st.markdown('##')
- st.markdown('##')
- st.markdown('##')
- st.markdown('##')
- st.markdown('##')
+ #st.markdown('##')
+#st.markdown('##')
+ #st.markdown('##')
+ #st.markdown('##')
  labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
  values = [28, 26, 24, 22]
 
