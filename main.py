@@ -34,14 +34,21 @@ db = firestore.Client.from_service_account_json("testdata1-20ec5-firebase-admins
 #db = firestore.Client(credentials=creds, project="TestData1")
  
 # Create a reference to the all the docs 
-docs_ref = db.collection("DevMode").stream()
+#docs_ref = db.collection("DevMode").stream()
 i=1 
 df = pd.DataFrame()
 TreeNos_list = []
-for doc in docs_ref:
+#for doc in docs_ref:
+    #TreeNos_list.append(doc.to_dict()['TreeNo'])
+   # timestamp = doc.to_dict()['timestamp']
+
+query = db.collection('DevMode').where(filter=FieldFilter("RowNo", "==", 4)).get()
+
+for doc in query: 
     TreeNos_list.append(doc.to_dict()['TreeNo'])
     timestamp = doc.to_dict()['timestamp']
-    
+
+
 #date = docs_ref[0].to_dict()['timestamp']
 #year,month,day = timestamp.year,timestamp.month,timestamp.day
 Total_trees = np.max(np.array(TreeNos_list)); 
