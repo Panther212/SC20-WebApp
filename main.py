@@ -211,7 +211,7 @@ with col1:
 
 
 with col2:
- st.text("")
+ st.text("fdgdgf")
  st.text("")
  st.text("")
  st.text("")
