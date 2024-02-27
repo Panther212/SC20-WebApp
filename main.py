@@ -236,7 +236,7 @@ with col2:
  chart_data = pd.DataFrame(
    np.random.randn(5, 1) / [60, 60] + [20.079966, 74.109314],
    columns=['lat', 'lon'])
- st.markdown("<h2 style='text-align: left; color: white;font-size: 18px'>Overview </h2>", unsafe_allow_html=True)
+ #st.markdown("<h2 style='text-align: left; color: white;font-size: 18px'>Overview </h2>", unsafe_allow_html=True)
  st.pydeck_chart(pdk.Deck(
     map_style='mapbox://styles/mapbox/satellite-streets-v12',
     initial_view_state=pdk.ViewState(
