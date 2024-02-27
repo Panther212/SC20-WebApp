@@ -203,7 +203,7 @@ with col1:
  #st.image('Scans_Image.jpg',width=620)
  Plots=['Plot 1', 'Plot 2', 'Plot 3']
  fig3 = go.Figure(data=[
-    go.Bar(name='Healthy', x=Plots, y=[100, 75,no_healthy],marker_color='#3488a0'),
+    go.Bar(name='Healthy', x=Plots, y=[60, 70,no_healthy],marker_color='#3488a0'),
     go.Bar(name='Infected', x=Plots, y=[50, 25,no_inf],marker_color='#773871'),
     #go.Bar(name='Suspicious', x=Plots, y=[120, 180,10],marker_color='#25d9c4')
  ])
