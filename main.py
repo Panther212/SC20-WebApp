@@ -228,6 +228,9 @@ with col2:
 #st.markdown('##')
  #st.markdown('##')
  #st.markdown('##')
+
+ st.image("Frame_4");
+ """
  labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
  values = [28, 26, 24, 22]
 
@@ -251,7 +254,7 @@ with col2:
                   marker=dict(colors=colors, line=dict(color='#000000', width=2)))
 
  st.plotly_chart(fig,use_container_width=True)
-    
+"""    
  chart_data = pd.DataFrame(
    np.random.randn(5, 1) / [60, 60] + [20.079966, 74.109314],
    columns=['lat', 'lon'])
