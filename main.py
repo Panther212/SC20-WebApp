@@ -230,14 +230,14 @@ with col2:
  #st.markdown('##')
 
 
-image2 = Image.open("Frame_4_2.jpg")
-new_image2 = image2.resize((400, 400))
-st.image(new_image2);
-chart_data = pd.DataFrame(
+ image2 = Image.open("Frame_4_2.jpg")
+ new_image2 = image2.resize((400, 400))
+ st.image(new_image2);
+ chart_data = pd.DataFrame(
    np.random.randn(5, 1) / [60, 60] + [20.079966, 74.109314],
    columns=['lat', 'lon'])
-st.markdown("<h2 style='text-align: left; color: white;font-size: 18px'>Overview </h2>", unsafe_allow_html=True)
-st.pydeck_chart(pdk.Deck(
+ st.markdown("<h2 style='text-align: left; color: white;font-size: 18px'>Overview </h2>", unsafe_allow_html=True)
+ st.pydeck_chart(pdk.Deck(
     map_style='mapbox://styles/mapbox/satellite-streets-v12',
     initial_view_state=pdk.ViewState(
         latitude=20.079966,
@@ -265,4 +265,4 @@ st.pydeck_chart(pdk.Deck(
       #        ],
          ),
     ],
- ))
+  ))
