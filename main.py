@@ -229,7 +229,10 @@ with col2:
  #st.markdown('##')
  #st.markdown('##')
 
- st.image("Frame_4_2.jpg");
+
+image2 = Image.open("Frame_4_2.jpg")
+new_image2 = image2.resize((400, 400))
+st.image(new_image2);
  chart_data = pd.DataFrame(
    np.random.randn(5, 1) / [60, 60] + [20.079966, 74.109314],
    columns=['lat', 'lon'])
