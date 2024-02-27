@@ -229,7 +229,7 @@ with col2:
  #st.markdown('##')
  #st.markdown('##')
 
- st.image("Frame_4.pdf");
+ st.image("Frame_4_2.jpg");
  """
  labels = ['Plot 1','Plot 2','Plot 3','Plot 4']
  values = [28, 26, 24, 22]
