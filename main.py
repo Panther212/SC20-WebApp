@@ -32,7 +32,7 @@ TreeNos_list = []
     #TreeNos_list.append(doc.to_dict()['TreeNo'])
    # timestamp = doc.to_dict()['timestamp']
 
-query = db.collection('DevMode').where(filter=FieldFilter("RowNo", "==", 4)).get()
+query = db.collection('DevMode').where(filter=FieldFilter("RowNo", "==", 5)).get()
 
 for doc in query: 
     TreeNos_list.append(doc.to_dict()['TreeNo'])
@@ -49,7 +49,7 @@ count = 1;
 no_inf = 0; 
 
 while (count <= Total_trees):
-    query = db.collection('DevMode').where(filter=FieldFilter("RowNo", "==", 4)).where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
+    query = db.collection('DevMode').where(filter=FieldFilter("RowNo", "==", 5)).where(filter=FieldFilter("TreeNo", "==", count)).where(filter=field_filter2);
     count_query=query.count().get(); 
     nb_docs=count_query[0][0].value;
     count+=1 
